@@ -1,0 +1,36 @@
+.chat {
+  color: white;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 1), 1px -1px 1px rgba(0, 0, 0, 1),
+    1px 1px 1px rgba(0, 0, 0, 1);
+  margin: 1px 0;
+  padding: 0.3ex 0.5ex;
+  border-radius: 3px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.icon {
+  border-radius: 50%;
+  margin: 0 0.3ex;
+  padding: 0;
+}
+
+.name {
+  margin: 0 0.3ex;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0 0.3ex;
+}
+
+/* emoji */
+.message img {
+  height: 1em;
+  margin: 0 2px;
+}

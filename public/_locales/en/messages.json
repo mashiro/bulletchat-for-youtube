@@ -1,0 +1,57 @@
+{
+  "description": {
+    "message": "Bullet chatting on YouTube"
+  },
+
+  "general": {
+    "message": "General"
+  },
+  "normal": {
+    "message": "Normal"
+  },
+  "superchat": {
+    "message": "Superchat"
+  },
+  "moderator": {
+    "message": "Moderator"
+  },
+
+  "scroll": {
+    "message": "Scroll"
+  },
+  "top": {
+    "message": "Top"
+  },
+  "bottom": {
+    "message": "Bottom"
+  },
+
+  "fontSize": {
+    "message": "Font size"
+  },
+
+  "position": {
+    "message": "Position"
+  },
+  "color": {
+    "message": "Color"
+  },
+  "backgroundColor": {
+    "message": "Background color"
+  },
+  "opacity": {
+    "message": "Opacity"
+  },
+  "duration": {
+    "message": "Duration (ms)"
+  },
+  "showIcon": {
+    "message": "Show icon"
+  },
+  "showName": {
+    "message": "Show name"
+  },
+  "usePaidColor": {
+    "message": "Use paid color"
+  }
+}
