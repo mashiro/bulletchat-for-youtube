@@ -2,6 +2,8 @@
   "manifest_version": 2,
   "name": "Bulletchat for YouTube",
   "version": "1.0.0",
+  "author": "mashiro",
+  "homepage_url": "https://github.com/mashiro/bulletchat-for-youtube",
   "description": "__MSG_description__",
   "default_locale": "en",
   "permissions": ["storage", "tabs", "https://www.youtube.com/*"],
@@ -30,6 +32,5 @@
     },
     "default_title": "BulletChat",
     "default_popup": "index.html#options"
-  },
-  "options_page": "index.html#options"
+  }
 }
