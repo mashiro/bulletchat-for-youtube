@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, FormControl, FormControlLabel, FormLabel, InputLabel, Typography } from '@material-ui/core'
+import { Box, FormControl, InputLabel, Typography } from '@material-ui/core'
 import { BasicSlider } from '../BasicSlider'
 import { locales } from './locales'
 import { OptionsPanelProps } from './types'

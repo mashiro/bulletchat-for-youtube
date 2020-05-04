@@ -8,7 +8,7 @@ import { BulletChatApp, BulletChatAppEmitterEvents } from '../../components/Bull
 import { BulletChatAppOptions, defaultBulletChatAppOptions } from '../../components/OptionsPage'
 import { MeasureRect } from '../../hooks'
 import { BulletChatOptionCategory } from '../../types'
-import { copyRGB, darken, toRGBAString } from '../../utils'
+import { darken, toRGBAString } from '../../utils'
 import { YouTubeBulletChatMessage } from '../observers/YouTubeLiveChatObserver'
 import { calcFontSize } from '../utils'
 import { BulletChatRenderer } from './BulletChatRenderer'

@@ -34,7 +34,7 @@ export const ColorPicker: React.FC<ColorPickerProps> = (props) => {
       setColor(value.rgb)
       props.onChange(value.rgb)
     },
-    [props.onChange]
+    [props]
   )
 
   useEffect(() => {

@@ -20,7 +20,7 @@ export function useScrollLanes() {
       })
       return i
     },
-    [lanes],
+    [lanes]
   )
 
   return { assignToScrollLane }
