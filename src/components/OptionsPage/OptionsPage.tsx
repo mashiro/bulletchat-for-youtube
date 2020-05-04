@@ -36,7 +36,6 @@ export const OptionPage: React.FC<OptionPageProps> = (props) => {
   // save and restore options
   useEffect(() => {
     chrome.storage.sync.get(defaultBulletChatAppOptions, (items) => {
-      console.log('sync.get', items)
       setOptions(items as BulletChatAppOptions)
     })
   }, [])

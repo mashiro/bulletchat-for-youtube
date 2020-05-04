@@ -176,14 +176,12 @@ export class YouTubeRenderer implements BulletChatRenderer {
 
   private onChangeOptions = (changes: { [key: string]: chrome.storage.StorageChange }, namespace: string): void => {
     Object.entries(changes).forEach(([key, change]) => {
-      console.log(change)
       const options = this.options as any
       options[key] = change.newValue
     })
   }
 
   private onChangeListRect = (listRect: MeasureRect) => {
-    console.log(listRect)
     this.listRect = listRect
   }
 
