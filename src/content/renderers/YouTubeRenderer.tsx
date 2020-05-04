@@ -12,6 +12,7 @@ import { darken, toRGBAString } from '../../utils'
 import { YouTubeBulletChatMessage } from '../observers/YouTubeLiveChatObserver'
 import { calcFontSize } from '../utils'
 import { BulletChatRenderer } from './BulletChatRenderer'
+import { createControlButton } from './createControlButton'
 import { createRendererElement } from './createRendererNode'
 import classes from './BulletChatRenderer.module.css'
 import { isEmpty } from 'lodash'
@@ -34,6 +35,7 @@ export class YouTubeRenderer implements BulletChatRenderer {
   private emitter = new Emittery.Typed<BulletChatAppEmitterEvents>()
   private options: BulletChatAppOptions = defaultBulletChatAppOptions
   private listRect: MeasureRect | null = null
+  private disabled: boolean = false
 
   async init() {
     chrome.storage.onChanged.addListener(this.onChangeOptions)
@@ -45,6 +47,14 @@ export class YouTubeRenderer implements BulletChatRenderer {
     this.rendererElement = createRendererElement()
     player.appendChild(this.rendererElement)
 
+    const controls = player.querySelector('.ytp-right-controls')
+    if (controls != null) {
+      const button = createControlButton()
+      controls.prepend(button)
+
+      button.addEventListener('click', this.onClickToggle)
+    }
+
     this.render()
   }
 
@@ -53,6 +63,10 @@ export class YouTubeRenderer implements BulletChatRenderer {
   }
 
   pushMessage(msg: YouTubeBulletChatMessage) {
+    if (this.disabled) {
+      return
+    }
+
     const options = this.getChatOptions(msg)
     const chatOptions: BulletChatOptions = {
       id: uuid(),
@@ -60,7 +74,7 @@ export class YouTubeRenderer implements BulletChatRenderer {
       duration: options.duration,
       Component: this.createChatComponent(msg, options),
     }
-    this.emitter.emit('chat', chatOptions)
+    this.emitter.emit('chat', { chat: chatOptions })
   }
 
   private getChatOptions(msg: YouTubeBulletChatMessage): ChatOptions {
@@ -181,8 +195,13 @@ export class YouTubeRenderer implements BulletChatRenderer {
     })
   }
 
-  private onChangeListRect = (listRect: MeasureRect) => {
+  private onChangeListRect = (listRect: MeasureRect): void => {
     this.listRect = listRect
+  }
+
+  private onClickToggle = (): void => {
+    this.disabled = !this.disabled
+    this.emitter.emit('toggle', { disabled: this.disabled })
   }
 
   private render() {
