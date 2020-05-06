@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Bulletchat for YouTube",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "mashiro",
   "homepage_url": "https://github.com/mashiro/bulletchat-for-youtube",
   "description": "__MSG_description__",
