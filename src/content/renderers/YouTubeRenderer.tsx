@@ -12,7 +12,7 @@ import { darken, toRGBAString } from '../../utils'
 import { YouTubeBulletChatMessage } from '../observers/YouTubeLiveChatObserver'
 import { calcFontSize } from '../utils'
 import { BulletChatRenderer } from './BulletChatRenderer'
-import { createControlButton } from './createControlButton'
+import { createToggleButton } from './createToggleButton'
 import { createRendererElement } from './createRendererNode'
 import classes from './BulletChatRenderer.module.css'
 import { isEmpty } from 'lodash'
@@ -49,7 +49,7 @@ export class YouTubeRenderer implements BulletChatRenderer {
 
     const controls = player.querySelector('.ytp-right-controls')
     if (controls != null) {
-      const button = createControlButton()
+      const button = createToggleButton()
       controls.prepend(button)
 
       button.addEventListener('click', this.onClickToggle)
