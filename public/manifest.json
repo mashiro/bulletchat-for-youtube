@@ -5,7 +5,7 @@
   "author": "mashiro",
   "homepage_url": "https://github.com/mashiro/bulletchat-for-youtube",
   "description": "__MSG_description__",
-  "default_locale": "ja",
+  "default_locale": "en",
   "permissions": ["storage", "tabs", "https://www.youtube.com/*"],
   "icons": {
     "16": "icon16.png",
