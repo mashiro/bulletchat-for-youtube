@@ -22,7 +22,7 @@ export const BulletChatScroll: React.FC<BulletChatScrollProps> = ({ id, duration
 
     const chatSize = ref.current.getBoundingClientRect()
     const laneIndex = assignToScrollLane(duration, chatSize.width)
-    const laneSize = Math.floor(listRect.height / chatSize.height)
+    const laneSize = Math.floor((listRect.height * 0.9) / chatSize.height)
     const lanePage = Math.floor(laneIndex / laneSize)
     const laneNumber = laneIndex % laneSize
 
