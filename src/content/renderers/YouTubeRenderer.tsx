@@ -2,7 +2,7 @@ import Emittery from 'emittery'
 import React, { ComponentType, CSSProperties } from 'react'
 import { RGBColor } from 'react-color'
 import ReactDOM from 'react-dom'
-import uuid from 'uuid/v4'
+import { v4 as uuidv4 } from 'uuid'
 import { BulletChatMode, BulletChatOptions } from '../../components/BulletChat'
 import { BulletChatApp, BulletChatAppEmitterEvents } from '../../components/BulletChatApp'
 import { BulletChatAppOptions, defaultBulletChatAppOptions } from '../../components/OptionsPage'
@@ -69,7 +69,7 @@ export class YouTubeRenderer implements BulletChatRenderer {
 
     const options = this.getChatOptions(msg)
     const chatOptions: BulletChatOptions = {
-      id: uuid(),
+      id: uuidv4(),
       mode: options.mode,
       duration: options.duration,
       Component: this.createChatComponent(msg, options),
