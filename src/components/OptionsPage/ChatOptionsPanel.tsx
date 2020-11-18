@@ -29,8 +29,8 @@ export const ChatOptionsPane: React.FC<ChatOptionsPanelProps> = ({ options, upda
             value={options[props.modeOptionKey]}
             onChange={(e) => updateOptions({ [props.modeOptionKey]: e.target.value })}
           >
-            <MenuItem value="scroll">Scroll</MenuItem>
-            <MenuItem value="bottom">Bottom</MenuItem>
+            <MenuItem value="scroll">{locales.scroll}</MenuItem>
+            <MenuItem value="bottom">{locales.bottom}</MenuItem>
           </Select>
         </Box>
       </FormControl>
