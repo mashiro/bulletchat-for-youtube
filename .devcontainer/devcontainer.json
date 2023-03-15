@@ -1,0 +1,12 @@
+{
+  "name": "bulletchat",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+  }
+}
