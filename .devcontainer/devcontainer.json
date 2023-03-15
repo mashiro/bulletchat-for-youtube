@@ -4,6 +4,8 @@
   "mounts": [
     "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
   ],
+  "remoteUser": "node",
+  "postCreateCommand": "sudo chown node node_modules",
   "customizations": {
     "vscode": {
       "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
