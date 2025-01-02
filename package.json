@@ -1,78 +1,29 @@
 {
   "name": "bulletchat-for-youtube",
-  "version": "1.3.0",
   "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "compile": "tsc --noEmit",
+    "postinstall": "wxt prepare"
+  },
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "emittery": "^0.7.2",
-    "lodash": "^4.17.20",
-    "react": "^17.0.1",
-    "react-color": "^2.19.3",
-    "react-dom": "^17.0.1",
-    "tinycolor": "^0.0.1",
-    "uuid": "^8.3.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.126",
-    "@types/jest": "26.0.15",
-    "@types/lodash": "^4.14.165",
-    "@types/node": "14.14.8",
-    "@types/react": "16.9.56",
-    "@types/react-color": "^3.0.4",
-    "@types/react-dom": "16.9.9",
-    "@types/resize-observer-browser": "^0.1.4",
-    "@types/tinycolor": "^1.1.27",
-    "@types/uuid": "^8.3.0",
-    "cross-env": "^7.0.2",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "node-sass": "^5.0.0",
-    "prettier": "^2.1.2",
-    "react-app-rewired": "^2.1.3",
-    "react-scripts": "4.0.0",
-    "typescript": "4.0.5"
-  },
-  "scripts": {
-    "start": "react-app-rewired start ",
-    "build": "react-app-rewired build && node update-manifest.js",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.{ts,tsx}",
-    "lint:fix": "eslint --fix src/**/*.{ts,tsx}"
-  },
-  "prettier": {
-    "printWidth": 120,
-    "tabWidth": 2,
-    "singleQuote": true,
-    "semi": false,
-    "trailingComma": "es5",
-    "arrowParens": "always",
-    "jsxBracketSameLine": false,
-    "jsxSingleQuote": false
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "webextensions": true
-    },
-    "extends": [
-      "react-app",
-      "plugin:prettier/recommended"
-    ],
-    "rules": {
-      "prettier/prettier": "error"
-    }
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@types/chrome": "^0.0.280",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "@wxt-dev/auto-icons": "^1.0.2",
+    "@wxt-dev/module-react": "^1.1.2",
+    "typescript": "^5.6.3",
+    "wxt": "^0.19.13"
   }
 }
