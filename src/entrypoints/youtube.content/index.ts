@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { YouTubeObserver } from "./observer";
+import { createYouTubeObserver } from "./observers/utils";
 
 const watchPattern = new MatchPattern("https://*.youtube.com/watch*");
 
@@ -7,10 +7,12 @@ export default defineContentScript({
   matches: ["https://*.youtube.com/*"],
   allFrames: true,
   async main(ctx) {
-    const observer = new YouTubeObserver();
-    await observer.observe((message) => {
-      console.log(message);
-    });
+    const observer = createYouTubeObserver();
+    if (observer != null) {
+      await observer.observe((message) => {
+        console.log(message);
+      });
+    }
 
     if (isTopFrame()) {
       const ui = await createShadowRootUi(ctx, {
