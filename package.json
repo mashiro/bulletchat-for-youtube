@@ -20,8 +20,10 @@
     "@radix-ui/react-slot": "^1.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "color": "^4.2.3",
     "lucide-react": "^0.469.0",
     "react": "^19.0.0",
+    "react-color": "^2.19.3",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7"
@@ -29,7 +31,9 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/chrome": "^0.0.280",
+    "@types/color": "^4.2.0",
     "@types/react": "^19.0.1",
+    "@types/react-color": "^3.0.13",
     "@types/react-dom": "^19.0.2",
     "@wxt-dev/auto-icons": "^1.0.2",
     "@wxt-dev/module-react": "^1.1.2",

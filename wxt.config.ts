@@ -8,6 +8,9 @@ export default defineConfig({
   autoIcons: {
     grayscaleOnDevelopment: false,
   },
+  runner: {
+    chromiumArgs: ["--user-data-dir=./.wxt/chrome-data"],
+  },
   manifest: {
     name: "Bulletchat for YouTube",
     description: "__MSG_description__",
