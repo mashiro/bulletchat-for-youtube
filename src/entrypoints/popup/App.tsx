@@ -2,8 +2,10 @@ import reactLogo from "@/assets/react.svg";
 import { useState } from "react";
 import wxtLogo from "/wxt.svg";
 import "./App.css";
+import "@/assets/tailwind.css";
+import { Button } from "@/components/ui/button";
 
-function App() {
+export function App() {
   const [count, setCount] = useState(0);
 
   return (
@@ -18,9 +20,9 @@ function App() {
       </div>
       <h1>WXT + React</h1>
       <div className="card">
-        <button type="button" onClick={() => setCount((count) => count + 1)}>
+        <Button size="sm" onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -31,5 +33,3 @@ function App() {
     </>
   );
 }
-
-export default App;

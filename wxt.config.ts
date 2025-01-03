@@ -10,7 +10,7 @@ export default defineConfig({
   },
   manifest: {
     name: "Bulletchat for YouTube",
-    description: '__MSG_description__',
-    default_locale: 'en',
-  }
+    description: "__MSG_description__",
+    default_locale: "en",
+  },
 });
