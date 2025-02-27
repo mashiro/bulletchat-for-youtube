@@ -17,7 +17,7 @@
     "shadcn:add": "TS_NODE_PROJECT=tsconfig.shadcn.json pnpm dlx shadcn@latest add"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "color": "^4.2.3",
@@ -32,15 +32,15 @@
     "@biomejs/biome": "1.9.4",
     "@types/chrome": "^0.0.280",
     "@types/color": "^4.2.0",
-    "@types/react": "^19.0.1",
+    "@types/react": "^19.0.10",
     "@types/react-color": "^3.0.13",
-    "@types/react-dom": "^19.0.2",
+    "@types/react-dom": "^19.0.4",
     "@wxt-dev/auto-icons": "^1.0.2",
     "@wxt-dev/module-react": "^1.1.2",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.6.3",
-    "wxt": "^0.19.13"
+    "typescript": "^5.7.3",
+    "wxt": "^0.19.27"
   }
 }
