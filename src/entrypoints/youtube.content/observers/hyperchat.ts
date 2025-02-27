@@ -1,5 +1,5 @@
 import type { YouTubeBulletChatMessage } from "@/lib/youtube/types";
-import { type InternalMessage, ORIGIN } from "./base";
+import { type InternalMessage, ORIGIN } from "./common";
 import type { Actions, AddChatItem, AddChatItemAction, YouTubeMessageDetail } from "./types";
 
 export class YouTubeHyperChatObserver implements MessageObserver<YouTubeBulletChatMessage> {

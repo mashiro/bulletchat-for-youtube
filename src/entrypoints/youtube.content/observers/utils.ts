@@ -9,12 +9,12 @@ type YouTubeObserverType = "top" | "live_chat" | "hyperchat";
 export function createYouTubeObserver(): MessageObserver<YouTubeBulletChatMessage> | undefined {
   const type = getObserverType();
   switch (type) {
-    case "top":
-      return new YouTubeTopFrameObserver();
+    // case "top":
+    //   return new YouTubeTopFrameObserver();
     case "live_chat":
       return new YouTubeLiveChatObserver();
-    case "hyperchat":
-      return new YouTubeHyperChatObserver();
+    // case "hyperchat":
+    //   return new YouTubeHyperChatObserver();
   }
 
   return undefined;

@@ -2,7 +2,7 @@ import type Color from "color";
 
 export type YouTubeBulletChatMessage = {
   name: string;
-  text: TextPart[];
+  text: string;
   iconUrl?: string;
   paid: boolean;
   paidColor?: Color;
@@ -21,4 +21,9 @@ type Text = {
 type Emoji = {
   type: "emoji";
   url: string;
+};
+
+export type YouTubeBulletChatMessageEvent = {
+  type: "YouTubeBulletChatMessage";
+  message: YouTubeBulletChatMessage;
 };

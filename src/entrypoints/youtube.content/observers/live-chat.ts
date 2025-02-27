@@ -1,12 +1,12 @@
 import { findElement } from "@/lib/dom";
 import { tryParseColor } from "@/lib/utils";
-import type { YouTubeBulletChatMessage } from "@/lib/youtube/types";
-import { type InternalMessage, ORIGIN } from "./base";
+import type { YouTubeBulletChatMessage, YouTubeBulletChatMessageEvent } from "@/lib/youtube/types";
+import { ORIGIN } from "./common";
 
 export class YouTubeLiveChatObserver implements MessageObserver<YouTubeBulletChatMessage> {
   private observer: MutationObserver | null = null;
 
-  async observe(listener: MessageListener<YouTubeBulletChatMessage>): Promise<void> {
+  async observe() {
     const topFrame = window.top!;
     const chatRoot = await findElement(document, "#items");
 
@@ -31,11 +31,11 @@ export class YouTubeLiveChatObserver implements MessageObserver<YouTubeBulletCha
   private processChatNode(topFrame: Window, node: Node) {
     try {
       const message = this.toBulletChatMessage(node);
-      const internalMessage: InternalMessage = {
-        type: "YouTubeLiveChatObserverMessage",
+      const event: YouTubeBulletChatMessageEvent = {
+        type: "YouTubeBulletChatMessage",
         message,
       };
-      topFrame.postMessage(internalMessage, ORIGIN);
+      topFrame.postMessage(event, ORIGIN);
     } catch (ex) {
       console.error(ex);
     }
@@ -66,7 +66,6 @@ export class YouTubeLiveChatObserver implements MessageObserver<YouTubeBulletCha
     return {
       name,
       text,
-      textHtml,
       iconUrl,
       paid,
       paidColor,

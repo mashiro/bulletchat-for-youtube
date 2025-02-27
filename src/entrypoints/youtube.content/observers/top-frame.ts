@@ -1,5 +1,5 @@
 import type { YouTubeBulletChatMessage } from "@/lib/youtube/types";
-import { type InternalMessage, ORIGIN } from "./base";
+import { type InternalMessage, ORIGIN } from "./common";
 
 export class YouTubeTopFrameObserver implements MessageObserver<YouTubeBulletChatMessage> {
   async observe(listener: MessageListener<YouTubeBulletChatMessage>): Promise<void> {
