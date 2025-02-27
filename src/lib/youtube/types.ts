@@ -24,6 +24,8 @@ type Emoji = {
 };
 
 export type YouTubeBulletChatMessageEvent = {
-  type: "YouTubeBulletChatMessage";
-  message: YouTubeBulletChatMessage;
+  type: "message";
+  data: YouTubeBulletChatMessage;
 };
+
+export type YouTubeBulletChatEvent = YouTubeBulletChatMessageEvent;

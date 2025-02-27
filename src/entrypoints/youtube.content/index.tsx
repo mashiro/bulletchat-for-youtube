@@ -4,7 +4,6 @@ import { App } from "./App";
 import { ORIGIN } from "./observers/common";
 import { createYouTubeObserver } from "./observers/utils";
 import "@/assets/tailwind.css";
-import type { YouTubeBulletChatMessageEvent } from "@/lib/youtube/types";
 
 export default defineContentScript({
   matches: ["https://*.youtube.com/*"],
@@ -23,13 +22,7 @@ export default defineContentScript({
             if (e.origin !== ORIGIN) {
               return;
             }
-
-            const event = e.data as YouTubeBulletChatMessageEvent;
-            if (event.type !== "YouTubeBulletChatMessage") {
-              return;
-            }
-
-            channel.port1.postMessage(event.message);
+            channel.port1.postMessage(e.data);
           });
 
           const wrapper = document.createElement("div");

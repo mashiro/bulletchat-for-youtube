@@ -32,8 +32,8 @@ export class YouTubeLiveChatObserver implements MessageObserver<YouTubeBulletCha
     try {
       const message = this.toBulletChatMessage(node);
       const event: YouTubeBulletChatMessageEvent = {
-        type: "YouTubeBulletChatMessage",
-        message,
+        type: "message",
+        data: message,
       };
       topFrame.postMessage(event, ORIGIN);
     } catch (ex) {

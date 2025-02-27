@@ -1,4 +1,4 @@
-import type { YouTubeBulletChatMessageEvent } from "@/lib/youtube/types";
+import type { YouTubeBulletChatEvent } from "@/lib/youtube/types";
 
 interface AppProps {
   port: MessagePort;
@@ -7,8 +7,10 @@ interface AppProps {
 export function App({ port }: AppProps) {
   useEffect(() => {
     port.onmessage = (e) => {
-      const event = e.data as YouTubeBulletChatMessageEvent;
-      console.log(e.data);
+      const event = e.data as YouTubeBulletChatEvent;
+      if (event.type === "message") {
+        console.log(event.data);
+      }
     };
 
     return () => {
