@@ -1,3 +1,4 @@
+import { isTopFrame } from "@/lib/utils";
 import type { YouTubeBulletChatMessage } from "@/lib/youtube/types";
 import { YouTubeHyperChatObserver } from "./hyperchat";
 import { YouTubeLiveChatObserver } from "./live-chat";
@@ -20,7 +21,7 @@ export function createYouTubeObserver(): MessageObserver<YouTubeBulletChatMessag
 }
 
 function getObserverType(): YouTubeObserverType | undefined {
-  if (window === window.top) {
+  if (isTopFrame()) {
     return "top";
   }
 

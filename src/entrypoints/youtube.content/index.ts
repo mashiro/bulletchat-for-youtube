@@ -1,7 +1,6 @@
+import { isTopFrame } from "@/lib/utils";
 import ReactDOM from "react-dom/client";
 import { createYouTubeObserver } from "./observers/utils";
-
-const watchPattern = new MatchPattern("https://*.youtube.com/watch*");
 
 export default defineContentScript({
   matches: ["https://*.youtube.com/*"],
@@ -36,7 +35,3 @@ export default defineContentScript({
     }
   },
 });
-
-function isTopFrame(): boolean {
-  return window === window.top;
-}
