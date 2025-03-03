@@ -11,6 +11,12 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.2
         version: 1.1.2(@types/react@19.0.10)(react@19.0.0)
+      '@react-hookz/web':
+        specifier: ^25.0.1
+        version: 25.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@wxt-dev/i18n':
+        specifier: ^0.2.3
+        version: 0.2.3(wxt@0.19.27(@types/node@22.10.3)(rollup@4.29.1)(yaml@2.7.0))
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -20,6 +26,9 @@ importers:
       color:
         specifier: ^4.2.3
         version: 4.2.3
+      eventmit:
+        specifier: ^2.0.4
+        version: 2.0.4
       lucide-react:
         specifier: ^0.469.0
         version: 0.469.0(react@19.0.0)
@@ -720,6 +729,21 @@ packages:
       '@types/react':
         optional: true
 
+  '@react-hookz/deep-equal@3.0.3':
+    resolution: {integrity: sha512-SLy+NmiDpncqc2d9TR4Y4R7f8lUFOQK9WbnIq02A6wDxy+dTHfA2Np0dPvj0SFp6i1nqERLmEUe9MxPLuO/IqA==}
+    engines: {node: '>=18.0.0'}
+
+  '@react-hookz/web@25.0.1':
+    resolution: {integrity: sha512-nUwtanhyrp2Sxg+4mNvsJPRvf92lcsEexMxBjMX4kGEFYtGWnXLnhn69W2xpeoVPvxEV3OAGsh5mBYl4hnPFBg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      js-cookie: ^3.0.5
+      react: ^16.8 || ^17 || ^18
+      react-dom: ^16.8 || ^17 || ^18
+    peerDependenciesMeta:
+      js-cookie:
+        optional: true
+
   '@rollup/pluginutils@5.1.4':
     resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
     engines: {node: '>=14.0.0'}
@@ -920,6 +944,14 @@ packages:
     resolution: {integrity: sha512-Wp1pZnRysvDvxkkkys6ZPXL9O2Q9RDjooAZeV19vBg4NXPyE21qO2fu3QmIcug3fPzKzpcFa6dm1Y1dX8qhfEg==}
     peerDependencies:
       wxt: '>=0.19.0'
+
+  '@wxt-dev/i18n@0.2.3':
+    resolution: {integrity: sha512-2X005PB1r+6sDYMOuZD5hxSOPkogEZZTLB5HEsOotQ5RYXF3c/OOMD+DffVeq+S0yKY2Dmg4Ujfu0Pq4busJYQ==}
+    peerDependencies:
+      wxt: '>=0.19.7'
+    peerDependenciesMeta:
+      wxt:
+        optional: true
 
   '@wxt-dev/module-react@1.1.3':
     resolution: {integrity: sha512-ede2FLS3sdJwtyI61jvY1UiF194ouv3wxm+fCYjfP4FfvoXQbif8UuusYBC0KSa/L2AL9Cfa/lEvsdNYrKFUaA==}
@@ -1434,6 +1466,9 @@ packages:
 
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
+
+  eventmit@2.0.4:
+    resolution: {integrity: sha512-ajC4xDTMb8ydU8+VCwd/NLZzjl3piZXguctx+4vcbieC+aRHhHHoTG5vlwndebPyejAoBfUDTs3Ykax4xRTgXw==}
 
   execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
@@ -3380,6 +3415,14 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.0.10
 
+  '@react-hookz/deep-equal@3.0.3': {}
+
+  '@react-hookz/web@25.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@react-hookz/deep-equal': 3.0.3
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
   '@rollup/pluginutils@5.1.4(rollup@4.29.1)':
     dependencies:
       '@types/estree': 1.0.6
@@ -3555,6 +3598,14 @@ snapshots:
       defu: 6.1.4
       fs-extra: 11.2.0
       sharp: 0.33.5
+      wxt: 0.19.27(@types/node@22.10.3)(rollup@4.29.1)(yaml@2.7.0)
+
+  '@wxt-dev/i18n@0.2.3(wxt@0.19.27(@types/node@22.10.3)(rollup@4.29.1)(yaml@2.7.0))':
+    dependencies:
+      chokidar: 3.6.0
+      confbox: 0.1.8
+      fast-glob: 3.3.2
+    optionalDependencies:
       wxt: 0.19.27(@types/node@22.10.3)(rollup@4.29.1)(yaml@2.7.0)
 
   '@wxt-dev/module-react@1.1.3(vite@6.0.6(@types/node@22.10.3)(jiti@1.21.7)(yaml@2.7.0))(wxt@0.19.27(@types/node@22.10.3)(rollup@4.29.1)(yaml@2.7.0))':
@@ -4088,6 +4139,8 @@ snapshots:
       '@types/estree': 1.0.6
 
   eventemitter3@5.0.1: {}
+
+  eventmit@2.0.4: {}
 
   execa@5.1.1:
     dependencies:

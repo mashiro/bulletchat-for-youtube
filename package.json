@@ -18,9 +18,12 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
+    "@react-hookz/web": "^25.0.1",
+    "@wxt-dev/i18n": "^0.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "color": "^4.2.3",
+    "eventmit": "^2.0.4",
     "lucide-react": "^0.469.0",
     "react": "^19.0.0",
     "react-color": "^2.19.3",

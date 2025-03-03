@@ -27,3 +27,7 @@ export function tryParseColor(value: string | null | undefined): Color | undefin
     return undefined;
   }
 }
+
+export function genId() {
+  return crypto.randomUUID();
+}

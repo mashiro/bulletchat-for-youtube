@@ -4,7 +4,7 @@ import { defineConfig } from "wxt";
 export default defineConfig({
   srcDir: "src",
   extensionApi: "chrome",
-  modules: ["@wxt-dev/module-react", "@wxt-dev/auto-icons"],
+  modules: ["@wxt-dev/module-react", "@wxt-dev/auto-icons", "@wxt-dev/i18n/module"],
   autoIcons: {
     grayscaleOnDevelopment: false,
   },
@@ -13,7 +13,7 @@ export default defineConfig({
   },
   manifest: {
     name: "Bulletchat for YouTube",
-    description: "__MSG_description__",
+    description: "__MSG_extDescription__",
     default_locale: "en",
   },
 });

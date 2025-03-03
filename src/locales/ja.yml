@@ -1,0 +1,17 @@
+extDescription: YouTubeで弾幕チャット
+general: 基本
+normal: ノーマル
+superchat: スパチャ
+moderator: モデレーター
+scroll: スクロール
+top: トップ
+bottom: ボトム
+fontSize: フォントサイズ
+position: 表示位置
+color: 色
+backgroundColor: 背景色
+opacity: 不透明度
+duration: 表示時間(ms)
+showIcon: アイコンを表示
+showName: 名前を表示
+usePaidColor: スパチャに色を付ける

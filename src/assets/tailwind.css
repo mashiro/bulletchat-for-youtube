@@ -57,3 +57,10 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+.bullet-chat-text {
+  @apply text-white;
+  @apply font-bold;
+  @apply text-[32px];
+  -webkit-text-stroke: 1px black;
+}

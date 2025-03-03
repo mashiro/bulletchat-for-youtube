@@ -25,18 +25,14 @@ export default defineContentScript({
             channel.port1.postMessage(e.data);
           });
 
-          const wrapper = document.createElement("div");
-          container.append(wrapper);
-
-          const root = ReactDOM.createRoot(wrapper);
+          const root = ReactDOM.createRoot(container);
           root.render(<App port={channel.port2} />);
 
-          return { root, wrapper };
+          return root;
         },
-        onRemove: (elements) => {
+        onRemove: (root) => {
           channel.port1.close();
-          elements?.root?.unmount();
-          elements?.wrapper?.remove();
+          root?.unmount();
         },
       });
 
