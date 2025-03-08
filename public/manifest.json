@@ -1,23 +1,25 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Bulletchat for YouTube",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "author": "mashiro",
   "homepage_url": "https://github.com/mashiro/bulletchat-for-youtube",
   "description": "__MSG_description__",
   "default_locale": "en",
-  "permissions": ["storage", "tabs", "https://www.youtube.com/*"],
+  "permissions": ["storage", "tabs"],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
   },
   "web_accessible_resources": [
-    "icon-white.svg"
+    {
+      "resources": ["icon-white.svg"],
+      "matches": ["<all_urls>"]
+    }
   ],
   "background": {
-    "scripts": ["%background.js%"],
-    "persistent": false
+    "service_worker": "%background.js%"
   },
   "content_scripts": [
     {
@@ -27,13 +29,12 @@
       "css": ["%content.css%"]
     }
   ],
-  "page_action": {
+  "action": {
+    "default_popup": "index.html#options",
     "default_icon": {
       "16": "icon16.png",
       "24": "icon24.png",
       "32": "icon32.png"
-    },
-    "default_title": "BulletChat",
-    "default_popup": "index.html#options"
+    }
   }
 }

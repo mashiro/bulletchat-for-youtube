@@ -1,7 +1,7 @@
 export function createToggleButton() {
   const obj = document.createElement('object')
   obj.type = 'image/svg+xml'
-  obj.data = chrome.extension.getURL('icon-white.svg')
+  obj.data = chrome.runtime.getURL('icon-white.svg')
   obj.style.boxSizing = 'border-box'
   obj.style.padding = '6px'
   obj.style.width = '100%'
