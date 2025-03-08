@@ -64,7 +64,7 @@ export class YouTubeLiveChatObserver implements BulletChatObserver<YouTubeBullet
 
   async observe(listener: () => Promise<BulletChatMessageHandler<YouTubeBulletChatMessage>>): Promise<void> {
     if (isChatFrame()) {
-      const chatApp = document.querySelector('yt-live-chat-app')
+      const chatApp = document.querySelector('#items')
       if (chatApp == null) {
         throw Error('Can not find chat app')
       }
@@ -84,7 +84,7 @@ export class YouTubeLiveChatObserver implements BulletChatObserver<YouTubeBullet
           })
         })
       })
-      this.observer.observe(chatApp, { childList: true, subtree: true })
+      this.observer.observe(chatApp, { childList: true })
     }
 
     if (isTopFrame()) {
