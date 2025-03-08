@@ -1,0 +1,6 @@
+[env]
+NODE_OPTIONS = "--openssl-legacy-provider"
+
+[tools]
+node = "18"
+yarn = "1"
